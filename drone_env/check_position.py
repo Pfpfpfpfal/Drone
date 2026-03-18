@@ -5,7 +5,6 @@ from typing import Optional, Tuple
 WORLD_TOPIC = "/world/quadcopter_teleop/pose/info"
 DRONE_NAME = "X3"
 
-
 def get_pose_dump() -> str:
     result = subprocess.run(
         ["gz", "topic", "-e", "-n", "1", "-t", WORLD_TOPIC],
@@ -28,7 +27,6 @@ def extract_drone_position(topic_dump: str, drone_name: str = DRONE_NAME) -> Opt
         return None
 
     return float(m.group(1)), float(m.group(2)), float(m.group(3))
-
 
 if __name__ == "__main__":
     dump = get_pose_dump()
