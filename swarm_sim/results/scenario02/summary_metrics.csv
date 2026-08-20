@@ -1,0 +1,4 @@
+drone_id,initial_distance_to_goal,final_distance_to_goal,mean_formation_error,max_formation_error,min_distance_overall
+1,22.1607,0.1921,0.0,0.0,2.3224
+2,25.0666,3.2344,0.9851,1.6056,2.3224
+3,23.4123,2.7958,1.2854,2.2922,2.3224

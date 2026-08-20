@@ -1,0 +1,17 @@
+# Параметры управления роем (используются ROS 2-узлом swarm_manager).
+# Структура согласована с конфигами сценариев в swarm_sim/configs.
+
+swarm_manager:
+  ros__parameters:
+    goal_position: [20.0, 10.0, 2.0]
+    k_goal: 0.8
+    k_formation: 0.6
+    k_avoidance: 1.2
+    max_velocity: 2.0
+    safe_distance: 1.5
+    drone_ids: [1, 2, 3]
+    offsets:
+      - [0.0, 0.0, 0.0]
+      - [-2.0, -2.0, 0.0]
+      - [-2.0, 2.0, 0.0]
+    update_rate_hz: 20.0

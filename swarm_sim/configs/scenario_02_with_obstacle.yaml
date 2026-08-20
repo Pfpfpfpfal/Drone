@@ -1,0 +1,41 @@
+name: with_obstacle
+swarm:
+  drones_count: 3
+  safe_distance: 1.5
+  formation_type: v_shape
+leader:
+  start_position:
+  - 0.0
+  - 0.0
+  - 2.0
+  goal_position:
+  - 20.0
+  - 10.0
+  - 2.0
+followers:
+- id: 2
+  offset:
+  - -2.0
+  - -2.0
+  - 0.0
+- id: 3
+  offset:
+  - -2.0
+  - 2.0
+  - 0.0
+obstacles:
+- center:
+  - 10.0
+  - 5.0
+  - 0.0
+  radius: 2.0
+  influence_radius: 4.0
+controller:
+  k_goal: 0.8
+  k_formation: 0.6
+  k_avoidance: 1.2
+  max_velocity: 2.0
+  sensor_range: 5.0
+simulation:
+  dt: 0.1
+  duration: 60.0
